@@ -16,6 +16,14 @@ if sesion == "Sesión 01":
   
 elif sesion=="Sesión 02":
   st.write("Bienvenido a la sesión 02")
+  precio=st.number_input("Ingrese el precio del producto")
+  descuento=st.number_input("Ingrese el descuento del producto(%)")
+  precio_final_producto=precio - (precio*descuento)
+  st.write("El precio final del producto es:", precio_final_producto)
+
+
+
+
 elif sesion=="Sesión 03":
   st.write("Bienvenido a la sesión 03")
 else:
