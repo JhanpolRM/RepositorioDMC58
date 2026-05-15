@@ -30,7 +30,7 @@ elif sesion=="Sesión 03":
   arreglo=np.arange(0, fin_rango)
   st.write(arreglo)
 
-else:
+elif sesion=="Sesión 04":
   st.write("Bienvenido a la sesión 04")
   principal = st.number_input("Ingrese el monto del préstamo", value=1000)
   tasa_anual = st.number_input("Ingrese la tasa anual en decimal", value=0.1, min_value=0.0, max_value=1.0)
@@ -39,3 +39,6 @@ else:
     
   cuota = round(lf.cuota_prestamo(principal, tasa_anual, anios, pagos_anio),2)
   st.write(f"El valor de la cuota es {cuota}")
+
+else:
+  st.write("Bienvenido a la sesión 05")
