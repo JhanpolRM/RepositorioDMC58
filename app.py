@@ -38,7 +38,7 @@ elif sesion=="Sesión 04":
   pagos_anio = st.number_input("Ingrese la cantidad de pagos por año", value=12)
     
   cuota = round(lf.cuota_prestamo(principal, tasa_anual, anios, pagos_anio),2)
-  st.write(f"El valor de la cuota es {cuota}")
+  st.write("El valor de la cuota es:", cuota)
 
 else:
   st.write("Bienvenido a la sesión 05")
