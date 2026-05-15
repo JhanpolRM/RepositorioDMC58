@@ -37,6 +37,6 @@ else:
   años=st.number_imput("Ingrese el numero de años del prestamo", value=1)
   pagos_anio=st.number_imput("Ingrese la cantidad de pagos por año", value=12)
 
-  cuota=lf.cuota_prestamo(principal, tasa_anual, años, pagos_anio)
-  st.write(cuota)
+  cuota = round(lf.cuota_prestamo(principal, tasa_anual, anios, pagos_anio),2)
+  st.write(f"El valor de la cuota es {cuota}")
 
