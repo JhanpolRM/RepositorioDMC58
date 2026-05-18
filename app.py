@@ -2,6 +2,8 @@ import streamlit as st
 import numpy as np
 import libreria_funciones as lf
 
+st.set_page_config(page_title="Ex-stream-ly Cool App",page_icon="🧊")
+
 st.title("Mi primera aplicación en Python")
 
 st.sidebar.title("Parámetros")
