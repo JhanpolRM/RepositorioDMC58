@@ -32,17 +32,36 @@ elif sesion=="Sesión 03":
   arreglo=np.arange(0, fin_rango)
   st.write(arreglo)
 
-elif sesion=="Sesión 04":
-  st.write("Bienvenido a la sesión 04")
-  principal = st.number_input("Ingrese el monto del préstamo", value=1000)
-  tasa_anual = st.number_input("Ingrese la tasa anual en decimal", value=0.1, min_value=0.0, max_value=1.0)
-  anios = st.number_input("Ingrese el número de años del préstamo", value=1)
-  pagos_anio = st.number_input("Ingrese la cantidad de pagos por año", value=12)
-    
-  cuota = round(lf.cuota_prestamo(principal, tasa_anual, anios, pagos_anio),2)
-  st.write("El valor de la cuota es:", cuota)
-
 else:
-  st.write("Bienvenido a la sesión 05")
+  
+  st.write("Bienvenido la sesión 4")
+  archivo = st.sidebar.file_uploader("Cargue su archivo")
+  
+  if archivo is not None:
+    
+    if archivo.name.endswith(".csv"):
+      datos = pd.read_csv(archivo)
+    elif archivo.name.endswith(".xlsx"):
+      datos = pd.read_excel(archivo)
 
+    st.write(datos)
+
+  else: 
+    st.write("Cargue el archivo ")
+else:
+  
+  st.write("Bienvenido la sesión 4")
+  archivo = st.sidebar.file_uploader("Cargue su archivo")
+  
+  if archivo is not None:
+    
+    if archivo.name.endswith(".csv"):
+      datos = pd.read_csv(archivo)
+    elif archivo.name.endswith(".xlsx"):
+      datos = pd.read_excel(archivo)
+
+    st.write(datos)
+
+  else: 
+    st.write("Cargue el archivo ")
 
