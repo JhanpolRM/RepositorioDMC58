@@ -1,6 +1,8 @@
 import streamlit as st
 import numpy as np
+import pandas as pd
 import libreria_funciones as lf
+
 
 st.set_page_config(page_title="Proyecto Ejemplo Streamlit", page_icon="🐍")
 
