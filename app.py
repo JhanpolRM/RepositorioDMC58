@@ -34,8 +34,7 @@ elif sesion=="Sesión 03":
   arreglo=np.arange(0, fin_rango)
   st.write(arreglo)
 
-else:
-  
+elif sesion=="Sesión 04":
   st.write("Bienvenido la sesión 4")
   archivo = st.sidebar.file_uploader("Cargue su archivo")
   
@@ -51,4 +50,5 @@ else:
   else: 
     st.write("Cargue el archivo ")
   
- 
+ else:
+   st.write("Bienvenido la sesión 5")
