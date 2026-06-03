@@ -1,5 +1,4 @@
 streamlit
 numpy
 pandas
-libreria_funciones
-plotly
+plotly.express
