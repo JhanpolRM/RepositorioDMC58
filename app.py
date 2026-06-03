@@ -48,12 +48,14 @@ elif sesion=="Sesión 04":
 
     st.write(datos)
     
-    lista_columnas_numericas = df.select_dtypes(include="number").columns.tolist()
-    lista_columnas_categoricas = df.select_dtypes(include="object").columns.tolist()
+    lista_columnas_numericas = datos.select_dtypes(include="number").columns.tolist()
+    lista_columnas_categoricas = datos.select_dtypes(include="object").columns.tolist()
 
     ejex=st.selectbox("Seleccione el eje X", lista_columnas_numericas)
     ejey=st.selectbox("Seleccione el eje Y", lista_columnas_numericas)
-    fig = 
+    fig = px.scatter(datos, x=ejex, y=ejey)
+
+    st.write(fig)
 
   else: 
     st.write("Cargue el archivo ")
