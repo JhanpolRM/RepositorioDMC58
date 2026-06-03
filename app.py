@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import libreria_funciones as lf
+import plotly.express as px
 
 
 st.set_page_config(page_title="Proyecto Ejemplo Streamlit", page_icon="🐍")
@@ -46,6 +47,13 @@ elif sesion=="Sesión 04":
       datos = pd.read_excel(archivo)
 
     st.write(datos)
+    
+    lista_columnas_numericas = df.select_dtypes(include="number").columns.tolist()
+    lista_columnas_categoricas = df.select_dtypes(include="object").columns.tolist()
+
+    ejex=st.selectbox("Seleccione el eje X", lista_columnas_numericas)
+    ejey=st.selectbox("Seleccione el eje Y", lista_columnas_numericas)
+    fig = 
 
   else: 
     st.write("Cargue el archivo ")
